@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffffff;
+    font-family: 'Jacquard 12', sans-serif;
+}
+img{
+    width: 100%;
+}
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+.side-bar{
+    background-color: #fedefd;
+    width: 20%;
+    padding: 30px 5px;
+}
+.profile-img{
+    border-bottom: 1px solid #ffffff;
+    text-align: center;
+}
+.profile-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.personal-info p{
+    margin: 15px 0;
+    font-size: 20px;
+    color: #5d5d5d;
+}
+.main-page{
+    padding: 30px 15px;
+    background-image: url(https://img.freepik.com/free-vector/flat-design-wildflower-heart-background_23-2150501084.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.add-post input[type=text]{
+    border: 1px solid #d7ebfd;
+    border-radius: 25px;
+    padding: 5px 20px;
+    width: 85%;
+}
+.post-author{
+    display: flex;
+    align-items: center;
+}
+.posts{
+    width: 55%;
+    margin: 0 auto;
+}
+.post{
+    padding: 25px 15px;
+    background: #f0f8ff8c;
+    margin: 15px 10px;
+    border-radius: 25px;
+}
+.post-author-img{
+    margin-right: 10px;
+}
+.post-author-img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.post-author-name{
+    margin: 0 5px;
+    background: #d0dafd;
+    padding: 1px 3px;
+    border-radius: 5px;
+    color: #5d5d5d;
+}
+#addPostButton {
+    border: none;
+    padding: 7px;
+    border-radius: 25px;
+    background: #fad3fe;
+    color: white;
+    font-family: 'Jacquard 12', sans-serif;
+    font-size: 26px;
+}
