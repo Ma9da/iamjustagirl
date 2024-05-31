@@ -25,4 +25,22 @@ $(document).ready(function() {
             alert("Please write something in the post.");
         }
     });
+    $(".hide").click(function(){
+        $(".profile-img").hide("slow")
+    })
+    $(".show").click(function(){
+        $(".profile-img").show("slow")
+    })
+    $(".border").click(function () {
+        $(".profile-img img").toggleClass("red-borders")
+    })
+    $("p").click(function(){
+        $(this).css("color", "red")
+    })
+
+    $("div").click(function(){
+        $("div").addClass("hi")
+    })
+    var tg = $("h6")
+    console.log($(".show") instanceof jQuery)
 });

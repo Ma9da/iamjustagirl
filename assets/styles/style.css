@@ -11,6 +11,16 @@ body{
 img{
     width: 100%;
 }
+.news-tab{
+    /* height: 40px; */
+    text-wrap: nowrap;
+    padding: 5px 0;
+    background-color: #fad3fe;
+    color: #5d5d5d;
+}
+.news-tab p{
+    font-size: 10px;
+}
 .container{
     display: flex;
     min-height: 100vh;
@@ -84,4 +94,21 @@ img{
     color: white;
     font-family: 'Jacquard 12', sans-serif;
     font-size: 26px;
+}
+.red-borders{
+    border: 3px solid #fad3fe;
+}
+.btn{
+    border: none;
+    padding: 7px;
+    border-radius: 25px;
+    background: #d0dafd;
+    color: white;
+    font-family: 'Jacquard 12', sans-serif;
+    font-size: 26px;
+}
+.floating-btns-wrapper{
+    position: fixed;
+    right: 0;
+    top: 8%;
 }
