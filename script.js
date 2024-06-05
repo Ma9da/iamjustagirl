@@ -24,14 +24,18 @@ function addPost(){
         alert("Please write something in the post.");
     }
 }
-$(document).ready(function() {
+function imagDisplay(){
+    $(".profile-img").toggle("slow", () => {
+        if ($(".profile-img").is(":visible")) {
+            $(".img-display").text("hide");
+        } else if (!$(".profile-img").is(":visible")){
+            $(".img-display").text("show");
+        }
+    });    
+}
+$(document).ready(() => {
     $("#addPostButton").click(addPost);
-    $(".hide").click(function(){
-        $(".profile-img").hide("slow")
-    })
-    $(".show").click(function(){
-        $(".profile-img").show("slow")
-    })
+    $(".img-display").click(imagDisplay)
     $(".border").click(function () {
         $(".profile-img img").toggleClass("red-borders")
     })
@@ -70,4 +74,4 @@ $(document).ready(function() {
     });
     
     
-});
+}); 
