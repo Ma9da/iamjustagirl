@@ -112,3 +112,10 @@ img{
     right: 0;
     top: 8%;
 }
+.breakfast{
+    width: 20%;
+    display: inline-block;
+}
+#milk{
+    scale: 2;
+}

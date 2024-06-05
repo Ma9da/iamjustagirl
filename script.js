@@ -37,10 +37,36 @@ $(document).ready(function() {
     $("p").click(function(){
         $(this).css("color", "red")
     })
-
-    $("div").click(function(){
-        $("div").addClass("hi")
-    })
-    var tg = $("h6")
-    console.log($(".show") instanceof jQuery)
+    $(".breakfast-wrapper").hide()
+    $( ".breakfast-btn" ).click(function(){
+        $(".breakfast-wrapper").show()
+        $("#milk").css({
+            "position": "relative",
+        });
+        $("#milk").animate( {
+            bottom: 54,
+            left: 20,
+        }, {
+            duration: "slow",  // 
+        step: function() {
+            $(this).css({
+                'transform': 'rotate(45deg)'
+            });
+        },
+            complete: function() {
+                
+                $("#box").css({
+                    'transform': 'rotate(' + 320 + 'deg)',
+                    '-ms-transform': 'rotate(' + 320 + 'deg)', /* IE 9 */
+                    '-webkit-transform': 'rotate(' + 320 + 'deg)', /* Safari and Chrome */
+                    '-o-transform': 'rotate(' + 320 + 'deg)', /* Opera */
+                    '-moz-transform': 'rotate(' + 320 + 'deg)' /* Firefox */
+                });
+                $( "#cereal img" ).attr("src", "./assets/images/pngtree-fruit-cereal-breakfast-icon-cartoon-vector-picture-image_7852498.png");
+                $( "#cereal img" ).animate({ right: '+=50' });
+            }
+        });
+    });
+    
+    
 });
