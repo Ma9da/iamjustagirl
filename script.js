@@ -33,11 +33,16 @@ function imagDisplay(){
         }
     });    
 }
-function addBorder(){
-        $(".profile-img img").toggleClass("red-borders")
+function addBorder() {
+    $(".profile-img img").toggleClass("red-borders");
+    if ($(".profile-img img").hasClass("red-borders")) {
+        $(".border").text("Remove Border");
+    } else {
+        $(".border").text("Add Border");
+    }
 }
 function changePcolor(){
-        $(this).css("color", "red")
+    $(this).css("color", "red")
 }
 function breakFast(){
         $(".breakfast-wrapper").show();
@@ -76,6 +81,26 @@ function breakFast(){
             }
         });
 }
+function newsTab() {
+    var tickerText = $('.news-tab p');
+    var containerWidth = $('.news-tab').width();
+    var textWidth = tickerText.width();
+    
+    tickerText.css({ left: containerWidth });
+
+    tickerText.animate(
+      { left: -textWidth }, 
+      {
+        duration: 50000, // Adjust this value to control the speed
+        easing: 'linear',
+        complete: function() {
+          newsTab(); // Restart the animation when complete
+        }
+      }
+    );
+  }
+
+
 
 $(document).ready(() => {
     $("#addPostButton").click(addPost);
@@ -83,5 +108,6 @@ $(document).ready(() => {
     $(".border").click(addBorder)
     $("p").click(changePcolor)
     $(".breakfast-wrapper").hide()
-    $( ".breakfast-btn" ).click(breakFast)
+    $( ".breakfast-btn").click(breakFast)
+    newsTab()
 }); 
